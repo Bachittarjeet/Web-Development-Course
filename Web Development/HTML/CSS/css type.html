@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Selector Types</title>
+	<style type="text/css">
+
+		/* Class Selector */
+		.btn{
+			border-radius: 5%; color: #fff;
+			height: auto; 
+			padding: 10px 10px 10px 10px;  
+		}
+		
+		/* ID Selector */	
+		#raka{
+			background-color: #000; 
+			width: 40px; 
+		}
+
+		#shaka{
+			background-color: red; 
+			width: 45px; 
+		}
+
+		/* Universal Seletor */
+		*{
+			padding: 0px 0px 0px 0px;
+			margin: 0px 0px 0px 0px;
+		}
+	
+		/* Tag/Type Selector */
+		p{
+			background-color: #f0f0f0; 
+			border-radius: 5%; color: #fff;
+			color: blue;
+			height: auto; 
+			padding: 10px 10px 10px 10px; 
+			width: 100px;
+
+		}
+		
+	</style>
+</head>
+<body>
+	<!-- 
+
+	Internal CSS
+	1. ID Selector (#)
+	2. Class Selector(.)
+	3. Universal Selector(*)
+	4. Tag/ Type Selector(p)
+	
+	 -->
+
+	<div class="btn" id="raka" name="raka" >
+		Raka
+	</div>
+	<div id="shaka" class="btn">
+		Shaka
+	</div>
+	<div>
+		Basanti
+	</div>
+	<p>
+		Raka ka bhai
+	</p>
+
+</body>
+</html>

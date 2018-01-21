@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu</title>
+	<style type="text/css">
+		
+		#myMenu1,#myMenu2{
+			clear: both;
+			list-style:none;
+		}
+
+		#myMenu1 > li {
+			background-color: #f0f0f0;
+			border-radius: 8%;
+			border:2px solid black;
+			float: left;
+			margin-left: 15px;
+			padding: 8px 10px 8px 10px;
+
+		}
+
+		#myMenu2 > li {
+			border-bottom: 2px solid grey;
+			float: left;
+			margin-left: 15px;
+			opacity: .5;
+			padding: 8px 10px 8px 10px;
+			transition: all ease .3s;
+		}
+		#myMenu2 > li:hover{
+			border-bottom: 2px solid red;
+			box-shadow: 5px 5px black;
+			color: red;
+			transition: all ease .3s;
+			transform: scale(1.1,1.1);
+			opacity: 1;
+		}
+
+	</style>
+</head>
+<body>
+	<ol id="myMenu1">
+		<li> Home </li>
+		<li> About Us </li>
+		<li> Gallery </li>
+		<li> Blog </li>
+		<li> Contact Us </li>
+	</ol>
+	
+	<br />
+	
+	<ol id="myMenu2">
+		<li> Home </li>
+		<li> About Us </li>
+		<li> Gallery </li>
+		<li> Blog </li>
+		<li> Contact Us </li>
+	</ol>
+</body>
+</html>
