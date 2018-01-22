@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu - Harpreet</title>
+	<style type="text/css">
+		ol{
+			list-style: none;
+		}
+		div, ol > li {
+			background-color: grey;
+			border-bottom: 2px black solid;
+			border-radius: 10%;
+			color: white;
+			float: left;
+			margin-left: 10px;
+			padding: 8px 10px 8px 10px;
+			transition: all ease 1s;
+			/*opacity: .3;*/
+		}
+		ol > li:hover {
+			color: grey;
+			background-color: white;
+			border-bottom: 2px solid grey;
+			box-shadow: 2px 2px black;
+			opacity: 1;
+			transform: scale(1.1,1.1);
+			transition: all ease 1s;
+
+
+		}
+		a{
+			text-decoration: none;
+			color: inherit;
+		}
+		.left{
+			left: 0px;
+			position: absolute;
+		}.right{
+			right: 10px;
+			position: fixed;
+		}.bottom{
+			bottom: 0px;
+			position: absolute;
+		}.bottom-right-fixed{
+			bottom: 0px;
+			right: 10px;
+			position: fixed;
+		}
+
+	</style>	
+</head>
+<body>
+
+	<ol>
+		<li><a href="">Home</a></li>
+		<li>About</li>
+		<li>Contact</li>
+		<li>Blog</li>
+	</ol>
+	<div style="height: 1500px; width: 500px; background-color: red !important;" ></div>
+	<div class="left">
+		Left
+	</div>
+
+	<div class="right">
+		Right
+	</div>
+
+	<div class="bottom">
+		Bottom
+	</div>
+
+	<div class="bottom-right-fixed">
+		<a href="#">Bottom Fixed</a>
+	</div>
+
+</body>
+</html>
