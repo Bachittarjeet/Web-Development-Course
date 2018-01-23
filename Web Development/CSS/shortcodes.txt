@@ -1,0 +1,4 @@
+table>(tr*10>((td)(td>input[type="email"].myInput)))
+
+table>(tr*10>td*2)
+
