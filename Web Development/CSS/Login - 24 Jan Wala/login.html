@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login Form</title>
+	<style type="text/css">
+		.btn{
+			background: green;
+			padding: 8px 10px 8px 10px;
+			border-radius: 8%;
+			width: 50px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+	<table border="1" width="200px">
+		<tr>
+			<td colspan="2" align="center">Login Form</td>
+	
+		</tr>
+		<tr>
+			<td>Username/Email</td>
+			<td> <input placeholder="Email or Username" value="Admin" type="text" name="username" id="username"></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input placeholder="Password" value="12345" type="Password" name="Password" id="password"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<div id="errDiv" style="color: red;"></div>
+			<!-- 	<input type="button" value="Login" onclick="login()">
+			 -->	
+			     <div class="btn" onclick="login()" contenteditable="true" > Login </div>
+				<input type="reset" value="Reset">
+
+			</td>
+		</tr>
+	</table>
+	</form>
+	
+	<script type="text/javascript">
+	
+		function login(){
+			
+			var username = document.getElementById('username').value;
+			var password = document.getElementById('password').value;
+
+			if(username=="Admin" && password=="12345"){
+				var key = prompt("Enter Key!!");
+				
+				if(key == "Kala Pathar"){
+					document.getElementById('errDiv').innerHTML = "";
+					alert("Welcome Master");
+
+				}
+				else{
+					document.getElementById('errDiv').innerHTML = " Bhul Gye Kya? ";
+				}
+			}
+			else
+				alert("Welcome Onionmus!!!");
+		}
+
+	</script>
+</body>
+</html>
