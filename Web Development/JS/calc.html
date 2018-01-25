@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<table border="1" >
+		<tr>
+			<td colspan="4"><input type="text" placeholder="Enter A Value" readonly="" name="" id="result"></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" value="7"  onclick="putValues(this.value)"></td>
+			<td><input type="button" class="btn" value="8"  onclick="putValues(this.value)"></td>
+			<td><input type="button" class="btn" value="9"  onclick="putValues(this.value)"></td>
+			<td><input type="button" class="btn" value="CE" onclick="document.getElementById('result').value=''; " ></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" value="4" onclick="putValues(this.value)"></td>
+			<td><input type="button" class="btn" value="5" onclick="putValues(this.value)"></td>
+			<td><input type="button" class="btn" value="6" onclick="putValues(this.value)"></td>
+			<td><input type="button" class="btn" value="+" onclick="putValues(this.value)"></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" value="1" onclick="putValues(this.value)"></td>
+			<td><input type="button" class="btn" value="2" onclick="putValues(this.value)"></td>
+			<td><input type="button" class="btn" value="3" onclick="putValues(this.value)"></td>
+			<td><input type="button" class="btn" value="-" onclick="putValues(this.value)"></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" value="*" onclick="putValues(this.value)"></td>
+			<td><input type="button" class="btn" value="0" onclick="putValues(this.value)"></td>
+			<td><input type="button" class="btn" value="/" onclick="putValues(this.value)"></td>
+			<td><input type="button" class="btn" value="=" onclick="giveResult()"></td>
+		</tr>
+		
+		
+	</table>
+	<script type="text/javascript" src="logic.js"></script>
+</body>
+</html>

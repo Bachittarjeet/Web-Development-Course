@@ -1,0 +1,25 @@
+.btn{
+	height: 40px;
+	width: 45px;
+	padding: 8px 10px 8px 10px;
+	background: #f0f0f0;
+	color: black;
+	border:2px solid black;
+}
+#result{
+	width: 200px;
+	height: 30px;
+	background: red;
+	color: white;
+	text-align: right;
+}
+#result::placeholder { 
+	color: white;
+	opacity: 1; 
+}
+table{
+	border-collapse: collapse;
+}
+td{
+	text-align: center;
+}
