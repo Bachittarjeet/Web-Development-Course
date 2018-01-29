@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		RegEx
+	</title>
+	<style>
+		table{
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+	<form action="" >
+		<table align="center" border="1" width="300">
+			<tr>
+				<td>Username</td>
+				<td>
+					<input type="text" name="username" id="username" onkeydown="validateUsername()">
+					<span id="errUname">
+						
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td>
+					<input type="Password" id="password" onkeypress="validatePassword()">
+					<span id="errPwd">
+						
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="button" onclick="alert('WOrking..')" value="Login"><input type="reset"></td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+
+		/* Validation username */
+		function validateUsername(){
+			
+			var username = document.getElementById('username').value;	
+			var errUname = document.getElementById('errUname');
+			var isKhali=true;
+
+			if(username != ""){
+				isKhali = false;
+
+				var pattern = /^[a-zA-Z]+$/;
+				
+				if(pattern.test(username)){
+
+					errUname.innerHTML ="Valid";
+				}
+				else
+					errUname.innerHTML ="Not Valid";
+					
+			}
+			else{
+				isKhali = true;
+
+			}
+		}
+		
+		// validating password
+		function validatePassword(){
+
+			var password = document.getElementById('password').value;	
+			var errPwd = document.getElementById('errPwd');
+
+			var isKhali=true;
+
+			if(password != "" && password.length>=1){
+				isKhali = false;
+
+				var pattern = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+				
+				if(pattern.test(password)){
+					errPwd.innerHTML ="Valid";
+				}
+				else{
+					errPwd.innerHTML ="Not Valid";
+				}
+				
+			}
+			else{
+				isKhali = true;
+			}
+		}
+	</script>
+</body>
+</html>
