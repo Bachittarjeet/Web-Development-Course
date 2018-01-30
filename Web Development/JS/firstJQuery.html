@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery Practice</title>
+	<style type="text/css">
+		.weak{
+			color: red;
+		}
+		.fair{
+			color: yellow;
+		}
+		.strong{
+			color: orange;
+		}
+		.super-strong{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	
+	<span class="super-strong">Enter Text:</span> 
+	<input type="text" name="txt" id="txt">
+	<span id="errSpan"></span>
+	
+	<img src="img/ok.jpg" height="100" width="180" style="display: none;">
+
+	
+
+<script type="text/javascript" src="js/jquery.js"></script>	
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		
+		$("#txt").keyup(function(){
+			$("img").css("display","none");
+			$("#errSpan").removeClass("weak fair strong super-strong");
+
+			$length = this.value.length; 
+			
+			if($length>0){
+				if($length<=5)
+					$("#errSpan").html('Weak').addClass('weak');
+				else if($length>5 && $length<=7)
+					$("#errSpan").html('Fair').addClass('fair');
+				else if($length>7 && $length<=10)
+					$("#errSpan").html('Strong').addClass('strong');
+				else
+					{
+						$("#errSpan").html('Super Strong AC').addClass('super-strong');
+						$("img").slideDown(1000);
+				}
+			
+			}else{
+				$("#errSpan").html('');	
+			}
+
+		});
+			
+	});
+</script>
+</body>
+</html>
