@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.img{
+			height: 300px;
+			width: 300px;
+		}
+		table{
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+
+	<img src="img/ok.jpg" id="img1" class="img">
+	<img src="img/notok.png" id="img2" class="img">
+	<button id="swap">SWAP</button>
+	<input type="button" id="tsb" value="Load Top - Secret Information">
+	
+	<hr>
+		
+		<select name="" id="cities">
+			
+		</select>
+
+	<hr>
+	<table id="userTbl" width="400" border="1">	
+	</table>
+
+
+
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$("#swap,#img1,#img2").click(function(){
+				$tmp = $('#img1').attr('src');
+				$('#img1').attr('src',$('#img2').attr('src'))
+				$('#img2').attr('src',$tmp);
+			});
+
+			 cities();
+			function cities(){
+				var cities = ['Bathinda','Mohali','Chandiagarh','Amritsar'];
+				var smallnames = ['bti','moh','chd','amr'];
+				var curCity = "Mohali";  
+
+				for (var i=0;i<cities.length;i++){
+				
+						$("#cities").append("<option value='"+smallnames[i]+"'>"+cities[i]+"</option>");
+						if(curCity == cities[i]){
+							$("#cities option[value = '"+smallnames[i]+"']").attr("selected","selected");
+						}
+				}
+
+						
+			}
+
+			$("#tsb").click(ltsi);
+			
+			function ltsi(){
+				$("#userTbl").empty();
+				/* Objects / Select Box*/
+					
+					//Array
+					var names = ['Raka',10,10.5,'Basanti', 'Sambha'];
+					//console.log(names[0]+" "+ names[1]);	
+
+					//Object
+					var person = {
+						name : 'Raka',
+						age : 40,
+						sal : '4K'
+					};
+					//console.log(person.name);
+
+					//How to use both
+					var persons = [
+						{
+							name : 'Raka',
+							age : 40,
+							sal : '4K',
+							dp : 'raka-dslr.jpg'
+						},
+						{
+							name : 'Basanti',
+							age : 30,
+							sal : '2K',
+							dp : 'basanti-3d.jpg'
+						},
+						{
+							name : 'Gabbar',
+							age : 80,
+							sal : '12K',
+							dp : 'gabbar-meme.jpg'
+						}
+					];
+
+					for($i=0; $i<persons.length;$i++){
+						var tr = "<tr>";
+						tr += "<td> <img src='img/"+ persons[$i].dp +"' class='img'>";
+						tr += "<td>"+persons[$i].name;
+						tr += "<td>"+persons[$i].age;
+						tr += "<td>"+persons[$i].sal;
+						tr += "</tr>";
+						//alert(persons[$i].name +" Added ");
+						//$("#userTbl").html($("#userTbl").html() + tr );
+						$("#userTbl").append(tr);
+					}
+			}
+
+
+		});
+
+	</script>
+</body>
+</html>

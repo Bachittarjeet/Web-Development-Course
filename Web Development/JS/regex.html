@@ -39,14 +39,17 @@
 	</form>
 	<script type="text/javascript">
 
+		alert('hi');
+
 		/* Validation username */
 		function validateUsername(){
 			
 			var username = document.getElementById('username').value;	
 			var errUname = document.getElementById('errUname');
-			var isKhali=true;
+			var isKhali = true;
 
 			if(username != ""){
+				
 				isKhali = false;
 
 				var pattern = /^[a-zA-Z]+$/;
