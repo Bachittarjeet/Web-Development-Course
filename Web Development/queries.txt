@@ -1,0 +1,31 @@
+create 
+-----------
+create table employee(id int(10) primary key,name varchar(20), password varchar(25),city varchar(20),salary float(10));
+
+insert
+------------------
+insert into employee values(101,'Raka','12345','Rampur',10000.0);
+insert into employee values(102,'Shaka','12345','Rampur',10000.0);
+insert into employee values(103,'Gabbar','12345','Landran',100.0);
+insert into employee values(104,'Basanti','12345','Rampur',10000.0);
+
+insert into employee(id,name,password) values(106,'Sambha','fjf');
+
+Select
+------------
+select * from employee;
+select * from employee limit 5;
+select id,name from employee ;
+select id,name from employee where city='Rampur' ;
+select id,name from employee where city='Rampur' and salary>=5000 ;
+
+update
+-------------
+update employee set city='Rajpura',salary=8000.0 where id=106;
+update employee set id=107 where id=106;
+
+delete
+-----------
+delete from employee where id=107;
+
+
