@@ -8,12 +8,12 @@
 	//Creating Connection
 	$con = mysqli_connect($host,$username,$password,$dbname);
 	
-/*
+
 	//Checking Connection
 	if($con){
-		echo "Chal Gya!";
+		echo "Database is up :)";
 	}else{
-		echo "Nhi Chala";
+		echo "Database is down :(";
 	}
-	*/
+	
  ?>
