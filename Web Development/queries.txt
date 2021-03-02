@@ -28,4 +28,6 @@ delete
 -----------
 delete from employee where id=107;
 
-
+Drop Query
+---------
+DROP table Table_Name
